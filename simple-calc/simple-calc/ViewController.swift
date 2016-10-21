@@ -21,5 +21,15 @@ class ViewController: UIViewController {
     }
 
 
-}
+   
+    
+    @IBAction func buttonInput(_ sender: UIButton) {
+        
+    }
 
+    @IBAction func buttonOperation(_ sender: UIButton) {
+        
+    }
+    
+    @IBOutlet weak var labelResults: UITextField!
+}
