@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     var number: Double = 0.0
     var operation: String = ""
     var results: Double = 0.0
+    var numArray = [Double]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +34,10 @@ class ViewController: UIViewController {
     @IBAction func buttonOperation(_ sender: UIButton) {
         print(sender.titleLabel!.text!)
         operation = sender.titleLabel!.text!
-        operation = "="
         switch operation {
         case "=":
             print("equals")
-            results = number
-            print(results)
-            print(number)
+            results = results + number
         case "+":
             print("adding")
             results = results + number
@@ -56,13 +54,46 @@ class ViewController: UIViewController {
         case "%":
             print("modding")
             results = results / number
+        case "Fact":
+            print("factorial")
+            var fact = number
+            var operand = number - 1
+            if number == 0 {
+                results = 1
+            } else {
+                for _ in 1...Int(number) - 1 {
+                    fact = fact * operand
+                    print(fact)
+                    operand -= 1
+                    results = fact
+                }
+            }
+        case "Count":
+            print("count")
+            numArray.append(number)
+            print(numArray)
+            results = Double(numArray.count)
+        case "Avg":
+            print("avg")
+            numArray.append(number)
+            results = 0.0
+            for num in numArray {
+                results += num
+                print(num)
+                print(results)
+            }
+            print(numArray)
+            results = results / Double(numArray.count)
+        case "Clear":
+            number = 0
+            results = 0
+            numArray.removeAll()
         default:
             print("error")
         }
         
         number = 0
         labelResults.text = ("\(results)")
-        
     }
     
     @IBOutlet weak var labelResults: UITextField!
