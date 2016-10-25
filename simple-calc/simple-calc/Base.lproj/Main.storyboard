@@ -166,7 +166,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="="/>
                                 <connections>
-                                    <action selector="buttonOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nhm-lT-tlP"/>
+                                    <action selector="buttonOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNQ-lt-9Qq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0r-iv-g4u">
